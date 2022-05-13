@@ -6,7 +6,7 @@ export function createFiberRoot(containerInfo, isConcurrent, hydrate) {
   // stateNode is any.
   const uninitializedFiber = createHostRootFiber(isConcurrent);
 
-  const root = {
+  const root /* : FiberRoot */ = {
     // Root Fiber <= root 节点对应的 Fiber 对象
     current: uninitializedFiber,
     // root 节点 <= ReactDOM.render(<App />, document.getElementById("root"))
